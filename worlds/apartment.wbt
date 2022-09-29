@@ -1,0 +1,193 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/bedroom/protos/Bed.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/living_room_furniture/protos/Sofa.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Ceiling.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/lights/protos/CeilingLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/mirror/protos/Mirror.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/living_room_furniture/protos/Carpet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/television/protos/Television.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/tables/protos/Desk.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/computers/protos/DesktopComputer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/computers/protos/ComputerMouse.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/computers/protos/Keyboard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  title "An apartment including 1 bedroom, a living room, and a desktop computer setup"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.33416268515325626 0.355610125851973 0.8728555082272837 1.6445077114617612
+  position 2.990716835430443 -0.46076758986585065 0.42247602597793227
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.02 0 0
+  rotation 0 1 0 0
+  floorSize 10 10
+  floorTileSize 0.8 0.8
+  floorAppearance Parquetry {
+    type "light strip"
+    colorOverride 0.661601 0.315633 0.416663
+    IBLStrength 10
+  }
+  wallHeight 2
+  wallAppearance BrushedAluminium {
+    colorOverride 0.704021 0.68484 0.683391
+    IBLStrength 1.5
+  }
+}
+E-puck {
+  translation 3.07 0 0
+  controller "create_avoid_obstacles"
+}
+Keyboard {
+  translation 3.29 -4.45 0.71
+  rotation 0 0 1 -1.5707953071795862
+}
+ComputerMouse {
+  translation 2.9100000116578273 -4.429999999999996 0.7099701962243887
+  rotation -4.184377154560414e-06 4.184375281022299e-06 -0.9999999999824909 1.5707953071970953
+}
+DesktopComputer {
+  translation 2.8 -4.56 -1.07462e-05
+  rotation -2.3464099999870814e-06 -2.3464099999870814e-06 0.9999999999944944 -1.5707953071795862
+}
+OfficeChair {
+  hidden position_0_0 -6.9974360522685484e-06
+  hidden rotation_1 0 0 -0.9999999999999999 6.997455830492834e-06
+  translation 3.139999999999481 -3.8000000000516945 -6.448507443132523e-05
+  rotation -3.1844061292770916e-05 -3.139596522524752e-05 -0.9999999990001245 1.5707953081769175
+}
+Desk {
+  translation 3.17 -4.59 -1.14033e-05
+  rotation 2.3464099999870814e-06 -2.3464099999870814e-06 0.9999999999944944 -1.5707953071795862
+}
+Monitor {
+  translation 3.4400000657169003 -4.6799998323528005 0.7096670478534118
+  rotation 0.0013931110248776423 -0.0010110596525664095 0.9999985184989282 1.8326011930788828
+  mass 4
+}
+Television {
+  translation 5 0.75 1.21
+  rotation 0 0 1 3.14159
+  displayWidth 180
+  displayHeight 120
+}
+Door {
+  hidden translation_4 0.3461188975275391 -0.017437569251383178 -4.440892098500626e-16
+  hidden rotation_4 0 0 -1 0.7088933873561681
+  translation -0.48 -0.26 -8.61885e-14
+  rotation 2.3464099999870814e-06 2.3464099999870814e-06 0.9999999999944944 1.5708
+  size 0.2 1 2
+  position -0.7088933873561684
+}
+Wall {
+  translation -2.9 -0.42 0.06
+  rotation 0 0 -1 1.5708
+  name "wall(2)"
+  size 0.1 4 1.95
+}
+Wall {
+  translation 0 2.3 0
+  rotation 0 1 0 4.6928e-06
+  name "wall(1)"
+  size 0.1 5.2 2
+}
+Carpet {
+  translation -3.64 0.97 0
+  rotation 0 1 0 0
+  name "carpet(5)"
+}
+Carpet {
+  translation -3.62 2.56 0
+  rotation 0 1 0 0
+  name "carpet(4)"
+}
+Carpet {
+  translation -3.63 4.18 0
+  rotation 0 1 0 0
+  name "carpet(3)"
+}
+Carpet {
+  translation -1.25 0.99 0
+  rotation 0 1 0 0
+  name "carpet(2)"
+}
+Carpet {
+  translation -1.25 4.18 0
+  rotation 0 1 0 0
+  name "carpet(1)"
+}
+Cabinet {
+  hidden position_6_0 4.25420506540738e-07
+  hidden translation_7 -8.465868080160428e-08 -1.8096635301390052e-14 0
+  hidden rotation_7 0 0 1 4.256623046721735e-07
+  hidden position_10_0 5.667986620276514e-07
+  hidden translation_11 9.587399368197213e-08 2.711719737646945e-14 0
+  hidden rotation_11 0 0 1 5.670278546345386e-07
+  hidden position_14_0 0.19846953525033414
+  hidden translation_15 0.19846953525033414 0 0
+  hidden position_22_0 0.08797295447478735
+  hidden translation_23 0.08797295447478735 0 0
+  hidden position_30_0 0.06531928372609273
+  hidden translation_31 0.06531928372609273 0 0
+  hidden position_38_0 0.20122474950508457
+  hidden translation_39 0.20122474950508457 0 0
+  translation -0.13 4.3928 0.207053
+  rotation -1.1989999999957786e-08 2.653549999990658e-06 0.9999999999964793 3.14159
+}
+Mirror {
+  translation -0.0760779 3.08096 1.00938
+  rotation 0.5821742584327413 0.5821762584336292 0.56757725195299 2.11565
+}
+Ceiling {
+  contactMaterial "nylon"
+  appearance Roughcast {
+    colorOverride 0.562234 0.562234 0.562234
+    textureTransform TextureTransform {
+      center 5 0
+      scale 10 10
+    }
+  }
+}
+CeilingLight {
+  translation 3 0 2.4
+  pointLightIntensity 11
+}
+Wall {
+  translation 0 2.3 0
+  rotation 0 1 0 4.692820414042842e-06
+  size 0.1 5.2 2
+}
+Carpet {
+  translation -1.22 2.58 0
+  rotation 0 1 0 0
+  name "carpet(6)"
+}
+Sofa {
+  translation 1.76 0.8 0
+}
+Bed {
+  translation -3.86 3.41 0
+  rotation 0.9950371902099892 0 0.09950371902099892 0
+  mattressAppearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
